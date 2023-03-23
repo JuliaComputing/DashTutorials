@@ -1,0 +1,6 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+Dash = "1b08a953-4be3-4667-9a23-3db579824955"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
