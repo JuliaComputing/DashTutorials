@@ -1,3 +1,5 @@
+# Run with: julia --project 1-hello_world.jl
+
 using Dash
 using Sockets
 
@@ -5,6 +7,7 @@ port = 8888
 
 const JULIAHUB = true
 
+# This is a minor modification to support JuliaHub
 app = JULIAHUB ? dash(requests_pathname_prefix="/proxy/$port/") : dash()
 
 app.layout = html_div() do
@@ -14,7 +17,7 @@ app.layout = html_div() do
         id = "example-graph-1",
         figure = (
             data = [
-                (x = ["giraffes", "orangutans", "monkeys"], y = [20, 14, 23], type = "bar", name = "SF"),
+                (x = ["giraffes", "orangutans", "monkeys"], y = [20, 14, 30], type = "bar", name = "SF"),
                 (x = ["giraffes", "orangutans", "monkeys"], y = [12, 18, 29], type = "bar", name = "Montreal"),
             ],
             layout = (title = "Dash Data Visualization", barmode="group")
