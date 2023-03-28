@@ -5,7 +5,7 @@ using PlotlyJS
 
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
-app = dash(external_stylesheets=external_stylesheets)
+app = include("app.jl")
 
 styles = Dict(
     "pre" => Dict(
