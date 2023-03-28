@@ -10,7 +10,7 @@ rename!(df2, Dict(:"Year" => "year"))
 available_indicators = unique(df2[!, "Indicator Name"])
 years = unique(df2[!, "year"])
 
-app = dash()
+app = include("app.jl")
 
 app.layout = html_div() do
     html_div(
@@ -91,4 +91,4 @@ callback!(
     )
 end
 
-run_server(app, "0.0.0.0", debug = true)
+include("server.jl")

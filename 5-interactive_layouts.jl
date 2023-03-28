@@ -23,8 +23,6 @@ df = DataFrame(
 
 fig = plot(df, x=:x, y=:y, color=:fruit, marker_size=20, custom_data=:customdata, mode="markers")
 
-#fig = relayout!(fig, )
-
 app.layout = html_div() do
     dcc_graph(
         id="basic-interactions",
@@ -102,6 +100,4 @@ callback!(app,
 end
 
 
-using Sockets
-
-run_server(app, Sockets.localhost, debug=true)
+include("server.jl")

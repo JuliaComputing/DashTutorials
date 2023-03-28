@@ -3,12 +3,8 @@
 using Dash
 using Sockets
 
-port = 8888
 
-const JULIAHUB = true
-
-# This is a minor modification to support JuliaHub
-app = JULIAHUB ? dash(requests_pathname_prefix="/proxy/$port/") : dash()
+app = include("app.jl")
 
 app.layout = html_div() do
     html_h1("Hello Dash"),
@@ -25,4 +21,4 @@ app.layout = html_div() do
     )
 end
 
-run_server(app, Sockets.localhost, port, debug=true)
+include("server.jl")

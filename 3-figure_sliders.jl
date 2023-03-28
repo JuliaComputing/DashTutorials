@@ -7,7 +7,7 @@ df = CSV.File(data_csv) |> DataFrame
 
 years = unique(df[!, :year])
 
-app = dash()
+app = include("app.jl")
 
 app.layout = html_div() do
     dcc_graph(id = "graph"),
@@ -47,4 +47,4 @@ callback!(
     )
 end
 
-run_server(app, "0.0.0.0", debug = true)
+include("server.jl")
