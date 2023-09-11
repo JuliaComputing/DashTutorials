@@ -1,3 +1,5 @@
+# Run with: julia --project 3-figure_sliders.jl
+
 using Dash
 using DataFrames, PlotlyJS, CSV
 

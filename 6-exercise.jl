@@ -1,4 +1,4 @@
-
+# Run with: julia --project 6-exercise.jl
 
 using CSV
 using DataFrames

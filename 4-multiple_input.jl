@@ -1,3 +1,5 @@
+# Run with: julia --project 4-multiple_input.jl
+
 using Dash
 using DataFrames, PlotlyJS, UrlDownload
 

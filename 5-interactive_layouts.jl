@@ -1,3 +1,5 @@
+# Run with: julia --project 5-interactive_layouts.jl
+
 using JSON
 using Dash
 using DataFrames

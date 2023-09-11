@@ -1,3 +1,5 @@
+# Run with: julia --project 2-interaction.jl
+
 using Dash
 
 app = include("app.jl")
