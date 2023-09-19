@@ -1,9 +1,10 @@
 # Run with: julia --project 4-multiple_input.jl
 
 using Dash
-using DataFrames, PlotlyJS, UrlDownload
+using DataFrames, PlotlyJS
+using CSV
 
-df2 = DataFrame(urldownload("https://raw.githubusercontent.com/plotly/datasets/master/country_indicators.csv"))
+df2 = CSV.read(download("https://raw.githubusercontent.com/plotly/datasets/master/country_indicators.csv"), DataFrame)
 
 dropmissing!(df2)
 
